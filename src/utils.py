@@ -1,3 +1,5 @@
+import math
+
 def successfully_sorted(original : list[int], permutation : list[int]):
     return is_permutation(original, permutation) and is_sorted(permutation)
 
@@ -16,5 +18,15 @@ def get_counts(a : list[int]):
         counts[i] = counts.get(i, 0) + 1
     return counts
 
+def fill_prefix_sum(a : list[int]):
+    sum = 0
+    for i,e in enumerate(a):
+        a[i] = sum
+        sum += e
+    return a
 
+def get_digit(number, n):
+    return number // 10**n % 10
 
+def get_num_digits(number):
+    return int(math.log10(number) + 1)
