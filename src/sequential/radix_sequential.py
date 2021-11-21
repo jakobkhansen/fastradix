@@ -10,7 +10,6 @@ def radixsort(array : list[int]):
     input = array.copy()
     output = [0]*n
 
-
     max_num_digits = get_num_digits(max(array, key=abs))
 
     for i in range(max_num_digits):
