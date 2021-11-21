@@ -26,7 +26,7 @@ def fill_prefix_sum(a : list[int]):
     return a
 
 def get_digit(number, n):
-    return number // 10**n % 10
+    return abs(number) // 10**n % 10
 
 def get_num_digits(number):
-    return int(math.log10(number) + 1)
+    return 1 if number == 0 else int(math.log10(abs(number)) + 1)
